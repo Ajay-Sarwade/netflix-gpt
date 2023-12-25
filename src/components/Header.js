@@ -1,14 +1,38 @@
 import React from "react";
 import netflixLogo from "../images/netflixLogo.png";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../utils/firebase.js";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const navigate = useNavigate();
+  const user = useSelector((store) => store.user);
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {});
+  };
+
   return (
-    <div className="">
-      <img
-        className="w-56 absolute z-10  bg-gradient-to-br from-black to-white-500"
-        src={netflixLogo}
-        alt="netflix-logo"
-      />
+    <div className="w-full absolute z-10 bg-gradient-to-b from-black to-white-500 flex justify-between">
+      <img className="w-48 " src={netflixLogo} alt="netflix-logo" />
+      {user && (
+        <div className="flex">
+          <h3 className="m-2 mt-6 font-bold text-lg text-white ">
+            Welcome {user?.displayName}
+          </h3>
+          <button
+            onClick={handleSignOut}
+            className="bg-red-500 w-24 text-white p-2 m-4 h-10 rounded-md font-semibold cursor-pointer text-center"
+          >
+            Sign out
+          </button>
+        </div>
+      )}
     </div>
   );
 }
