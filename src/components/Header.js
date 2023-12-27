@@ -30,7 +30,7 @@ function Header() {
   };
 
   return (
-    <div className="w-full absolute z-10 bg-gradient-to-b from-black to-white-500 flex justify-between">
+    <div className="w-full absolute z-10 bg-gradient-to-b from-black to-white-500 flex justify-between z-30">
       <img className="w-48 " src={netflixLogo} alt="netflix-logo" />
       {user && (
         <div className="flex">
