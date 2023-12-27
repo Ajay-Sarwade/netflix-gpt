@@ -8,3 +8,6 @@ export const options = {
 };
 
 export const IMG_PATH = "https://image.tmdb.org/t/p/w500";
+
+export const OPEN_AI_KEY =
+  "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";
