@@ -39,15 +39,15 @@ const GptSearch = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-[40%] md:pt-[0%]">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-1/2 bg-black absolute z-20 mt-[10%] flex grid grid-cols-12 p-2"
+        className="w-[90%] md:w-1/2 bg-black absolute z-20 mt-[10%] flex grid grid-cols-12 p-2"
       >
         <input
           ref={inputText}
-          className="p-2 m-2 col-span-9 rounded-sm"
-          placeholder="What kind of movies do u want to watch today?"
+          className="p-2 m-2 col-span-9 rounded-sm text-xs md: "
+          placeholder="Old hindi comedy movies..."
         ></input>
         <button
           onClick={handleGptSearchClick}

@@ -10,7 +10,7 @@ function Browse() {
   useGetMovies();
   const isGptPage = useSelector((store) => store.gpt.isGptPage);
   return (
-    <div>
+    <div className="bg-black">
       <Header />
       {isGptPage ? (
         <GptPage />

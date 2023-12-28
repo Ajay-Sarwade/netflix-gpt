@@ -7,7 +7,7 @@ const TrailerComponent = ({ movieId }) => {
   useGetMovieTrailer(movieId);
 
   return (
-    <div className="absolute  aspect-video ">
+    <div className="absolute  aspect-video mt-[30%] md:mt-[0%]">
       <iframe
         className="w-screen aspect-video "
         src={"https://www.youtube.com/embed/" + videoKey + "?autoplay=1&mute=1"}

@@ -95,7 +95,7 @@ function Login() {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-full md:w-4/12 md:h-9/12 absolute bg-black  p-12 rounded-sm my-36 mx-auto right-0 left-0 text-white bg-opacity-80"
+        className="w-[90%] md:w-4/12 md:h-9/12 absolute bg-black  p-12 rounded-sm my-36 mx-auto right-0 left-0 text-white bg-opacity-80"
       >
         <h1 className="font-bold text-3xl py-3 ">
           {signIn ? "Sign In" : "Sign Up"}

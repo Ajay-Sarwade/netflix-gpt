@@ -36,11 +36,15 @@ function Header() {
   };
 
   return (
-    <div className="w-full absolute z-10 bg-gradient-to-b from-black to-white-500 flex justify-between z-30">
-      <img className="w-48 " src={netflixLogo} alt="netflix-logo" />
+    <div className="w-full absolute z-10 bg-gradient-to-b from-black to-white-500 flex flex-col md:flex-row justify-between z-30">
+      <img
+        className="w-48 mx-auto md:mx-0"
+        src={netflixLogo}
+        alt="netflix-logo"
+      />
       {user && (
-        <div className="flex">
-          <h3 className="m-2 mt-6 font-bold text-lg text-white ">
+        <div className="flex mx-auto md:mx-0 -mt-[5%] md:mt-[0%]">
+          <h3 className="hidden md:block m-2 mt-6 font-bold text-lg text-white ">
             Welcome {user?.displayName}
           </h3>
           <button
