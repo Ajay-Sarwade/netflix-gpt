@@ -4,6 +4,7 @@ import {
   addNowPlayingMovies,
   addPopularMovies,
   addTopRatedMovies,
+  addTrailerVideoDetails,
   addUpcomingMovies,
 } from "../utils/moviesSlice";
 import { useEffect } from "react";
@@ -17,6 +18,7 @@ export const useGetMovies = () => {
     );
     const json = await data.json();
     dispatch(addNowPlayingMovies(json.results));
+    dispatch(addTrailerVideoDetails(json.results[0]));
   };
   const getPopularMovies = async () => {
     const data = await fetch(

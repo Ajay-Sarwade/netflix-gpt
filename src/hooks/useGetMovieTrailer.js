@@ -19,6 +19,9 @@ export const useGetMovieTrailer = (movieId) => {
     let videos =
       json?.results.filter((video) => video?.type === "Trailer") || videos[0];
     let video = videos?.length > 0 ? videos[0] : json?.results?.[0];
-    dispatch(addVideoKey(video.key));
+
+    if (video && video?.key) {
+      dispatch(addVideoKey(video.key));
+    }
   };
 };

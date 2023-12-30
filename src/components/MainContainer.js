@@ -5,8 +5,12 @@ import { useSelector } from "react-redux";
 
 function MainContainer() {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
+  const trailerVideoDetails = useSelector(
+    (store) => store.movies?.trailerVideoDetails
+  );
   if (!movies) return;
-  const movie = movies?.[1];
+
+  const movie = trailerVideoDetails || movies?.[0];
 
   return (
     <div>
