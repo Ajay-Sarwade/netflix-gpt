@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const TitleComponent = ({ title, overview }) => {
   return (
     <div className="relative pt-56 px-14 bg-gradient-to-b from-black w-screen aspect-video z-10">
-      <h1 className="-mx-5 md:mx-3 text-2xl md:text-5xl font-bold w-2/4 m-4 text-white">
+      <h1 className="-mx-5 md:mx-3 text-2xl md:text-5xl font-bold w-4/4 md:w-1/2 m-4 text-white">
         {title}
       </h1>
 
